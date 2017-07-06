@@ -1,0 +1,7 @@
+Total height = 212px
+
+Total width = 462px
+
+Browser calculated height = 172
+
+Browser calculated width = 422
