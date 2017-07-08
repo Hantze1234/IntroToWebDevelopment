@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/JavaScript" src="sampleAuditionProblem.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="container">
+    <h1>Sample</h1><br>
+    <form name="numberFun" onsubmit="return validateItems();" 
+          class="form-inline">
+            <div class="form-group">
+                <label for="num1">Starting Number</label>
+                <input type="number" class="form-control" id="num1">
+            </div>
+            <br><br>
+            <div class="form-group">
+                <label for="num2">Ending Number</label>
+                <input type="number" class="form-control" id="num2">
+            </div>
+            <br><br>
+            <div class="form-group">
+                <label for="num3">Step</label>
+                <input type="number" class="form-control" id="num3">
+            </div>
+            <br><br>           
+            <button type="submit" id="submitButton" class="btn btn-default">Display Evens</button>
+    </form>
+    <script>
+
+    //Not sure if funciton should go here or in *.js
+    function getEvens(num1, num2){    
+            for (var i = num1; i <= num2; i++){
+                if ((i % 2) == 0){
+                    if (i <= num3){
+                        return i;
+                        //document.getElementById("even").textContent = i;
+                    }
+                }
+            }
+        }    
+    </script>
+
+    // Would need a call to getEvens with num1 and num2 passed in.
+
+    // Display multiple return values in tabular form.
+    
+    <table id="results" style="display:none;">
+        <thead>
+            <tr>
+                <th>Here are the even numbers between <num1.value> and <num2.value> by <num3.value>'s:</th>              
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><span id="even"></span></td>
+            </tr>            
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
